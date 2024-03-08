@@ -1,0 +1,22 @@
+body {
+  margin: 0px;
+}
+body .mainTitle h1 {
+  text-align: center;
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+body .mainTitle h1 .location {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background-color: #EAEAEA;
+}/*# sourceMappingURL=main.css.map */

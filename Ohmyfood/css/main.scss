@@ -2,25 +2,25 @@ body {
     margin: 0px;
 
 
-.mainTitle h1 {
-text-align: center;
-font-family: Shrikhand;
-font-size: 30px;
-font-weight: 400;
-margin: 0;
-padding-top: 30px;
-padding-bottom: 30px;
-display: flex;
-justify-content: center;
+    .mainTitle h1 {
+        text-align: center;
+        font-family: Shrikhand;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
 
-.location {
-    display: flex;
-height: 50px;
-justify-content: center;
-align-items: center;
-gap: 17px;
-background-color: #EAEAEA;
-}
-}
+        .location {
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            gap: 17px;
+            background-color: #EAEAEA;
+        }
+    }
 
 }

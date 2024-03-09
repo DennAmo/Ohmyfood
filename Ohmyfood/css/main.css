@@ -117,6 +117,7 @@ body .restaurants a {
 body .restaurants .menuCard:nth-child(3) .fa-heart {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
+  background-clip: #9356DC;
   color: transparent;
   font-weight: 900;
 }

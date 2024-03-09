@@ -153,6 +153,7 @@ body {
             .fa-heart {
                 background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
                 -webkit-background-clip: text;
+                background-clip: $dot-store;
                 color: transparent;
                 font-weight: 900;
             }

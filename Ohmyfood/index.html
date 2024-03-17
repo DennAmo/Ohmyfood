@@ -6,28 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
     <meta name="description" content="Description de la page">
-    <link rel="stylesheet" href="./css/main.css"><link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<main>
-    <header>
-        <div class="mainTitle">
-            <h1>ohmyfood</h1>
-            <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Paris, Belleville</p>
-            </div>
-        </div>
-    </header>
 
-    <body>
+<body>
+    <main>
+
+        <header>
+            <div class="mainTitle">
+                <h1>ohmyfood</h1>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Paris, Belleville</p>
+                </div>
+            </div>
+        </header>
+
         <div class="viewMore">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
             <a class="explore" href="#"><span>Explorez nos restaurants</span>
             </a>
         </div>
+        
         <div class="chooseMenu">
             <h2>Fonctionnement</h2>
             <div class="fonctionnementContainer">
@@ -60,47 +64,73 @@
                 </div>
             </div>
         </div>
+
         <section class="restaurants">
             <h2>Restaurants</h2>
-            <a class="menuCard" href="#">
-                <img src="./images/restaurants/rest1.jpg" alt="">
-                <p class="newBadge">Nouveau</p>
-                <h3>La palette du goût</h3>
-                <span>Ménilmontant</span>
-                <i class="fa-solid fa-heart fa-2x"></i>
-            </a>
-            <a class="menuCard" href="#">
-                <img src="./images/restaurants/rest2.jpg" alt="">
-                <p class="newBadge">Nouveau</p>
-                <h3>La note enchantée</h3>
-                <span>Charonne</span>
-                <i class="fa-solid fa-heart fa-2x"></i>
-            </a>
-            <a class="menuCard" href="#">
-                <img src="./images/restaurants/rest3.jpg" alt="">
-                <p class="newBadge">Nouveau</p>
-                <h3>À la française</h3>
-                <span>Cité Rouge</span>
-                <i class="fa-solid fa-heart fa-2x"></i>
-            </a>
-            <a class="menuCard" href="#">
-                <img src="./images/restaurants/rest4.jpg" alt="">
-                <p class="newBadge">Nouveau</p>
-                <h3>Le délice des sens</h3>
-                <span>Folie-Méricourt</i></span>
-                <i class="fa-solid fa-heart fa-2x"></i>
-            </a>
+            <div class="cardContain">
+                <a class="menuCard" href="#">
+                    <img src="./images/restaurants/rest1.jpg" alt="">
+                    <p class="newBadge">Nouveau</p>
+                    <h3>La palette du goût</h3>
+                    <span>Ménilmontant</span>
+                </a>
+                <input type="checkbox" id="heartCheckbox" class="hidden-checkbox">
+                <label for="heartCheckbox">
+                    <i class="fa-solid fa-heart fa-2x" id="heartIcon"></i>
+                </label>
+            </div>
+
+            <div class="cardContain">
+                <a class="menuCard" href="#">
+                    <img src="./images/restaurants/rest2.jpg" alt="">
+                    <p class="newBadge">Nouveau</p>
+                    <h3>La note enchantée</h3>
+                    <span>Charonne</span>
+                </a>
+                <input type="checkbox" id="heartCheckbox2" class="hidden-checkbox">
+                <label for="heartCheckbox2">
+                    <i class="fa-solid fa-heart fa-2x" id="heartIcon2"></i>
+                </label>
+            </div>
+
+            <div class="cardContain">
+                <a class="menuCard" href="#">
+                    <img src="./images/restaurants/rest3.jpg" alt="">
+                    <p class="newBadge">Nouveau</p>
+                    <h3>À la française</h3>
+                    <span>Cité Rouge</span>
+                </a>
+                <input type="checkbox" id="heartCheckbox3" class="hidden-checkbox">
+                <label for="heartCheckbox3">
+                    <i class="fa-solid fa-heart fa-2x" id="heartIcon3"></i>
+                </label>
+            </div>
+
+            <div class="cardContain">
+                <a class="menuCard" href="#">
+                    <img src="./images/restaurants/rest4.jpg" alt="">
+                    <p class="newBadge">Nouveau</p>
+                    <h3>Le délice des sens</h3>
+                    <span>Folie-Méricourt</span>
+                </a>
+                <input type="checkbox" id="heartCheckbox4" class="hidden-checkbox">
+                <label for="heartCheckbox4">
+                    <i class="fa-solid fa-heart fa-2x" id="heartIcon4"></i>
+                </label>
+            </div>
         </section>
-    </body>
-    <footer>
-        <div class="footerLayout">
-            <h1>ohmyfood</h1>
-            <p><i class="fa-solid fa-utensils"></i>Proposez un restaurant</p>
-            <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
-            <p>Mentions légales</p>
-            <p>Contact</p>
-        </div>
-    </footer>
-</main>
+
+        <footer>
+            <div class="footerLayout">
+                <h1>ohmyfood</h1>
+                <p><i class="fa-solid fa-utensils"></i>Proposez un restaurant</p>
+                <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+                <p>Mentions légales</p>
+                <p>Contact</p>
+            </div>
+        </footer>
+
+    </main>
+</body>
 
 </html>

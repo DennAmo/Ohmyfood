@@ -114,19 +114,31 @@ body .restaurants a {
   text-decoration: none;
   color: inherit;
 }
-body .restaurants .menuCard:nth-child(3) .fa-heart {
+body .restaurants .cardContain {
+  position: relative;
+}
+body .restaurants .cardContain .fa-heart {
+  position: absolute;
+  font-weight: 100;
+  font-size: 30px;
+  cursor: pointer;
+  bottom: 20px;
+  right: 40px;
+}
+body .restaurants .cardContain #heartCheckbox:checked + label #heartIcon,
+body .restaurants .cardContain #heartCheckbox2:checked + label #heartIcon2,
+body .restaurants .cardContain #heartCheckbox3:checked + label #heartIcon3,
+body .restaurants .cardContain #heartCheckbox4:checked + label #heartIcon4 {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
-  background-clip: #9356DC;
+  background-clip: text;
   color: transparent;
   font-weight: 900;
 }
-body .restaurants h2 {
-  padding-top: 54px;
-  margin: 0px;
-  padding-left: 20px;
+body .restaurants .cardContain input {
+  display: none;
 }
-body .restaurants .menuCard {
+body .restaurants .cardContain .menuCard {
   position: relative;
   margin: 20px;
   display: flex;
@@ -134,13 +146,13 @@ body .restaurants .menuCard {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-body .restaurants .menuCard img {
+body .restaurants .cardContain .menuCard img {
   height: 231px;
   border-radius: 20px 20px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .restaurants .menuCard .newBadge {
+body .restaurants .cardContain .menuCard .newBadge {
   font-size: 14px;
   font-weight: 500;
   display: flex;
@@ -155,25 +167,23 @@ body .restaurants .menuCard .newBadge {
   z-index: 1;
   padding: 9px;
 }
-body .restaurants .menuCard span,
-body .restaurants .menuCard h3 {
+body .restaurants .cardContain .menuCard span,
+body .restaurants .cardContain .menuCard h3 {
   margin: 0px;
   padding-left: 13px;
 }
-body .restaurants .menuCard h3 {
+body .restaurants .cardContain .menuCard h3 {
   padding-top: 16px;
   padding-bottom: 3px;
 }
-body .restaurants .menuCard span {
+body .restaurants .cardContain .menuCard span {
   padding-bottom: 12px;
 }
-body .restaurants .menuCard .fa-heart {
-  font-weight: 100;
-  font-size: 30px;
-  position: absolute;
-  right: 25px;
-  bottom: -10px;
-  margin-bottom: 33px;
+
+h2 {
+  padding-top: 54px;
+  margin: 0px;
+  padding-left: 20px;
 }
 
 footer {

@@ -5,13 +5,9 @@ $main-font: Roboto;
     font-family: $main-font;
 }
 
-main {
-    overflow-x: hidden;
-}
-
 body {
     margin: 0px;
-
+   
     header {
 
         display: flex;
@@ -118,8 +114,7 @@ body {
             border-radius: 15.043px;
             box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
             justify-content: space-between;
-
-
+            cursor: pointer;          
 
             span {
                 font-family: $main-font;

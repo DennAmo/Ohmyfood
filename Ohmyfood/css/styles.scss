@@ -7,9 +7,9 @@ $exploreBtn-hover: #{linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(25
 $white-font: white;
 $dot-store: #9356DC;
 
-@import "./css/_footer.scss";
-@import "./css/_loader.scss";
-@import "./css/desktop";
+@import "_footer.scss";
+@import "_loader.scss";
+@import "_desktop.scss";
 
 a {
     text-decoration: none;
@@ -39,7 +39,7 @@ body {
             padding-bottom: 30px;
         }
 
-        .location-bar {
+        .header__locationBar {
             justify-content: center;
             display: flex;
             align-items: center;

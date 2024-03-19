@@ -3,8 +3,13 @@ $main-font: Roboto;
 $location-bar-background: #EAEAEA;
 $grey-background: #F6F6F6;
 $exploreBtn-background: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
+$exploreBtn-hover: #{linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%)};
 $white-font: white;
 $dot-store: #9356DC;
+
+/*animation color*/
+$hill-mountain: #4DB6AC;
+$animation-background: #009688;
 
 * {
   font-family: $main-font;
@@ -16,10 +21,11 @@ main {
 
 /***********  TRANSITION DE L'ANIMATION ***************/
 .content {
-  opacity: 0; /* Le contenu est initialement masqué */
-  animation: showContent 3s forwards; /* Animation pour afficher le contenu */
+  opacity: 0;
+  animation: showContent 3s forwards; 
 }
 
+/* Animation pour afficher le contenu de la page après l'animation principale */
 @keyframes showContent {
   0% {
     display: none;
@@ -41,29 +47,16 @@ body {
 
   /***********  TRANSITION DE L'ANIMATION SUITE ***************/
 
-  animation: back-ground 3s;
 
 
   .loader {
-    animation: hideLoader 3s forwards; /* Animation pour masquer l'écran de chargement*/
+    animation: hideLoader 3s forwards;
   }
 
+   /* Animation pour faire disparaitre "l'écran de chargement" */
   @keyframes hideLoader {
     0% {
-      opacity: 1; /* L'écran de chargement est entièrement visible au début */
-    }
-
-    100% {
-      opacity: 0;
-      display: none;
-    }
-  }
-
-
-  @keyframes back-ground {
-    0% {
-      background-color: #009688;
-      opacity: 1;
+      opacity: 1; 
     }
 
     100% {
@@ -81,11 +74,11 @@ body {
 
   .loop {
     margin: 0 auto;
-    background: #009688;
+    background: $hill-mountain;
     position: relative;
-    display: block;
+    display: flex;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     overflow: hidden;
     border-bottom: 3px solid #fff;
     color: #fff;
@@ -99,12 +92,12 @@ body {
     width: 2px;
     height: 2px;
     box-shadow:
-      0 0 0 50px #4DB6AC,
-      60px 50px 0 70px #4DB6AC,
-      90px 90px 0 50px #4DB6AC,
-      250px 250px 0 50px #4DB6AC,
-      290px 320px 0 50px #4DB6AC,
-      320px 400px 0 50px #4DB6AC;
+      0 0 0 50px $hill-mountain,
+      60px 50px 0 70px $hill-mountain,
+      90px 90px 0 50px $hill-mountain,
+      250px 250px 0 50px $hill-mountain,
+      290px 320px 0 50px $hill-mountain,
+      320px 400px 0 50px $hill-mountain;
     transform: rotate(130deg);
     animation: mtn 20s linear infinite;
   }
@@ -117,12 +110,12 @@ body {
     border-radius: 50%;
     height: 20px;
     box-shadow:
-      0 0 0 50px #4DB6AC,
-      -20px 0 0 20px #4DB6AC,
-      -90px 0 0 50px #4DB6AC,
-      250px 0 0 50px #4DB6AC,
-      290px 0 0 50px #4DB6AC,
-      620px 0 0 50px #4DB6AC;
+      0 0 0 50px $hill-mountain,
+      -20px 0 0 20px $hill-mountain,
+      -90px 0 0 50px $hill-mountain,
+      250px 0 0 50px $hill-mountain,
+      290px 0 0 50px $hill-mountain,
+      620px 0 0 50px $hill-mountain;
     animation: hill 4s 2s linear infinite;
   }
 
@@ -334,7 +327,7 @@ body {
   }
 
   h2 {
-    padding-top: 54px;
+    padding-top: 50px;
     margin: 0px;
     padding-left: 20px;
   }
@@ -375,6 +368,10 @@ body {
     justify-content: center;
   }
 
+  .explore:hover {
+      background: $exploreBtn-hover;
+  }
+
   .explore span {
     color: $white-font;
     font-size: 15px;
@@ -385,6 +382,11 @@ body {
 
     h2 {
       margin-left: 20px;
+      padding-bottom: 25px;
+    }
+
+    .fonctionnementContainer {
+      padding-right: 50px;
     }
 
     .fonctionnementLayout {
@@ -393,7 +395,7 @@ body {
       align-items: center;
       position: relative;
       background-color: #F6F6F6;
-      width: 322.486px;
+      width: 100%;
       height: 72.379px;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
       margin-bottom: 25px;
@@ -566,7 +568,6 @@ footer {
 
   .fonctionnementContainer {
     display: flex;
-    justify-content: space-around;
-    padding-right: 25px;
+    justify-content: space-evenly;
   }
 }

@@ -81,11 +81,54 @@ body .menu .menuStart h3 {
 body .menu .menuStart h3::after {
   content: "";
   position: absolute;
-  width: 10%;
+  width: 38px;
   height: 2px;
   background-color: #99E2D0;
   bottom: -5px;
   left: 18px;
+}
+body .menu .circle-layout {
+  color: white;
+  background-color: #99e2d0;
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
+  opacity: 0;
+}
+body .menu .selectionMenu {
+  font-weight: 100;
+  font-size: 30px;
+  cursor: pointer;
+}
+body .menu #selectionMenu:checked + label #validation,
+body .menu #selectionMenu2:checked + label #validation,
+body .menu #selectionMenu3:checked + label #validation {
+  opacity: 1;
+  transition: 1.5s;
+}
+body .menu #selectionMenu:checked + label .euro,
+body .menu #selectionMenu2:checked + label .euro {
+  transform: translateX(-48px);
+  font-size: 14px;
+}
+body .menu #selectionMenu3:checked + label .euro {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+}
+body .menu #selectionMenu:checked + label span, body .menu p,
+body .menu #selectionMenu2:checked + label span, body .menu p,
+body .menu #selectionMenu3:checked + label span, body .menu p {
+  font-size: 15px;
+}
+body .menu input {
+  display: none;
 }
 body .menu .entries {
   display: flex;
@@ -96,26 +139,30 @@ body .menu .entries {
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   cursor: pointer;
-}
-body .menu .entries span {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-body .menu .entries p {
-  font-family: Roboto;
-  font-size: 15.043px;
-  font-weight: 300;
-  white-space: nowrap;
-  margin: 0;
+  position: relative;
 }
 body .menu .entries .leftColumn {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+body .menu .entries .leftColumn span {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+}
+body .menu .entries .leftColumn p {
+  font-family: Roboto;
+  font-size: 15.043px;
+  font-weight: 300;
+  margin: 0;
+}
 body .menu .entries .rightColumn {
   display: flex;
   flex-direction: column-reverse;
+}
+body .menu .entries .rightColumn span {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
 }/*# sourceMappingURL=menu.css.map */

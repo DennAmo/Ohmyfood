@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*animation color*/
 * {
   font-family: Roboto;
 }
@@ -9,10 +10,11 @@ main {
 
 /***********  TRANSITION DE L'ANIMATION ***************/
 .content {
-  opacity: 0; /* Le contenu est initialement masqué */
-  animation: showContent 3s forwards; /* Animation pour afficher le contenu */
+  opacity: 0;
+  animation: showContent 3s forwards;
 }
 
+/* Animation pour afficher le contenu de la page après l'animation principale */
 @keyframes showContent {
   0% {
     display: none;
@@ -28,26 +30,16 @@ main {
 body {
   margin: 0;
   /***********  TRANSITION DE L'ANIMATION SUITE ***************/
-  animation: back-ground 3s;
+  /* Animation pour faire disparaitre "l'écran de chargement" */
   /***********  TRANSITION DE L'ANIMATION FIN ***************/
   /***********  ANIMATION ***************/
   /***********  ANIMATION FIN ***************/
 }
 body .loader {
-  animation: hideLoader 3s forwards; /* Animation pour masquer l'écran de chargement*/
+  animation: hideLoader 3s forwards;
 }
 @keyframes hideLoader {
   0% {
-    opacity: 1; /* L'écran de chargement est entièrement visible au début */
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-@keyframes back-ground {
-  0% {
-    background-color: #009688;
     opacity: 1;
   }
   100% {
@@ -57,11 +49,11 @@ body .loader {
 }
 body .loop {
   margin: 0 auto;
-  background: #009688;
+  background: #4DB6AC;
   position: relative;
-  display: block;
+  display: flex;
   width: 100%;
-  height: 600px;
+  height: 100vh;
   overflow: hidden;
   border-bottom: 3px solid #fff;
   color: #fff;
@@ -234,7 +226,7 @@ body header .mainTitle .location {
   position: relative;
 }
 body h2 {
-  padding-top: 54px;
+  padding-top: 50px;
   margin: 0px;
   padding-left: 20px;
 }
@@ -267,6 +259,9 @@ body .explore {
   display: flex;
   justify-content: center;
 }
+body .explore:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
 body .explore span {
   color: white;
   font-size: 15px;
@@ -276,6 +271,10 @@ body .chooseMenu {
 }
 body .chooseMenu h2 {
   margin-left: 20px;
+  padding-bottom: 25px;
+}
+body .chooseMenu .fonctionnementContainer {
+  padding-right: 50px;
 }
 body .chooseMenu .fonctionnementLayout {
   margin-left: 32px;
@@ -283,7 +282,7 @@ body .chooseMenu .fonctionnementLayout {
   align-items: center;
   position: relative;
   background-color: #F6F6F6;
-  width: 322.486px;
+  width: 100%;
   height: 72.379px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
@@ -428,7 +427,6 @@ footer .footerLayout i {
   }
   .fonctionnementContainer {
     display: flex;
-    justify-content: space-around;
-    padding-right: 25px;
+    justify-content: space-evenly;
   }
 }/*# sourceMappingURL=main.css.map */

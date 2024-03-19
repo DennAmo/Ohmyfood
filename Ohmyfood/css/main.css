@@ -1,15 +1,37 @@
 @charset "UTF-8";
+footer {
+  background-color: #353535;
+}
+footer * {
+  color: white;
+}
+footer p,
+footer h1 {
+  margin: 0;
+}
+footer p {
+  padding-bottom: 7px;
+}
+footer h1 {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+footer .footerLayout {
+  padding: 23px;
+  padding-bottom: 22px;
+}
+footer .footerLayout .fa-handshake-angle {
+  font-size: 11px;
+}
+footer .footerLayout i {
+  padding-right: 10px;
+}
+
 /*animation color*/
-* {
-  font-family: Roboto;
-}
-
-main {
-  overflow-x: hidden;
-}
-
 /***********  TRANSITION DE L'ANIMATION ***************/
-.content {
+.content, header, footer {
   opacity: 0;
   animation: showContent 3s forwards;
 }
@@ -26,18 +48,11 @@ main {
     opacity: 1;
   }
 }
-/***********  TRANSITION DE L'ANIMATION FIN ***************/
-body {
-  margin: 0;
-  /***********  TRANSITION DE L'ANIMATION SUITE ***************/
-  /* Animation pour faire disparaitre "l'écran de chargement" */
-  /***********  TRANSITION DE L'ANIMATION FIN ***************/
-  /***********  ANIMATION ***************/
-  /***********  ANIMATION FIN ***************/
-}
-body .loader {
+.loader {
   animation: hideLoader 3s forwards;
 }
+
+/* Animation pour faire disparaitre "l'écran de chargement" */
 @keyframes hideLoader {
   0% {
     opacity: 1;
@@ -47,9 +62,11 @@ body .loader {
     display: none;
   }
 }
-body .loop {
+/***********  TRANSITION DE L'ANIMATION FIN ***************/
+/***********  ANIMATION ***************/
+.loop {
   margin: 0 auto;
-  background: #4DB6AC;
+  background: #9356DC;
   position: relative;
   display: flex;
   width: 100%;
@@ -57,37 +74,64 @@ body .loop {
   overflow: hidden;
   border-bottom: 3px solid #fff;
   color: #fff;
+  justify-content: center;
+  align-items: center;
 }
-body .mountain {
+
+.loader_button {
+  width: 30%;
+  height: 70px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border-width: 0px;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.loader_button h2 {
+  margin: 0px;
+  padding: 0px;
+  font-family: Shrikhand;
+  font-weight: 400;
+}
+
+.mountain {
   position: absolute;
   right: -900px;
   bottom: -20px;
   width: 2px;
   height: 2px;
-  box-shadow: 0 0 0 50px #4DB6AC, 60px 50px 0 70px #4DB6AC, 90px 90px 0 50px #4DB6AC, 250px 250px 0 50px #4DB6AC, 290px 320px 0 50px #4DB6AC, 320px 400px 0 50px #4DB6AC;
+  box-shadow: 0 0 0 50px #9356DC, 60px 50px 0 70px #9356DC, 90px 90px 0 50px #9356DC, 250px 250px 0 50px #9356DC, 290px 320px 0 50px #9356DC, 320px 400px 0 50px #9356DC;
   transform: rotate(130deg);
   animation: mtn 20s linear infinite;
 }
-body .hill {
+
+.hill {
   position: absolute;
   right: -900px;
   bottom: -50px;
   width: 400px;
   border-radius: 50%;
   height: 20px;
-  box-shadow: 0 0 0 50px #4DB6AC, -20px 0 0 20px #4DB6AC, -90px 0 0 50px #4DB6AC, 250px 0 0 50px #4DB6AC, 290px 0 0 50px #4DB6AC, 620px 0 0 50px #4DB6AC;
+  box-shadow: 0 0 0 50px #9356DC, -20px 0 0 20px #9356DC, -90px 0 0 50px #9356DC, 250px 0 0 50px #9356DC, 290px 0 0 50px #9356DC, 620px 0 0 50px #9356DC;
   animation: hill 4s 2s linear infinite;
 }
-body .tree,
-body .tree:nth-child(2),
-body .tree:nth-child(3) {
+
+.tree,
+.tree:nth-child(2),
+.tree:nth-child(3) {
   position: absolute;
   height: 100px;
   width: 35px;
   bottom: 0;
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg) no-repeat;
 }
-body .rock {
+
+.rock {
   margin-top: -17%;
   height: 2%;
   width: 2%;
@@ -96,8 +140,9 @@ body .rock {
   position: absolute;
   background: #ddd;
 }
-body .truck,
-body .wheels {
+
+.truck,
+.wheels {
   transition: all ease;
   width: 85px;
   margin-right: -60px;
@@ -106,43 +151,54 @@ body .wheels {
   position: absolute;
   background: #eee;
 }
-body .truck {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg) no-repeat;
+
+.truck {
+  background: url(../images/assets/truck.svg) no-repeat;
   background-size: contain;
   height: 60px;
 }
-body .truck:before {
+
+.truck:before {
   content: " ";
   position: absolute;
   width: 25px;
   box-shadow: -30px 28px 0 1.5px #fff, -35px 18px 0 1.5px #fff;
 }
-body .wheels {
+
+.wheels {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg) no-repeat;
   height: 15px;
   margin-bottom: 0;
 }
-body .tree {
+
+.tree {
   animation: tree 3s 0s linear infinite;
 }
-body .tree:nth-child(2) {
+
+.tree:nth-child(2) {
   animation: tree2 2s 0.15s linear infinite;
 }
-body .tree:nth-child(3) {
+
+.tree:nth-child(3) {
   animation: tree3 8s 0.05s linear infinite;
 }
-body .rock {
+
+.rock {
   animation: rock 4s -0.53s linear infinite;
 }
-body .truck {
+
+.truck {
   animation: truck 4s 0.08s ease infinite;
 }
-body .wheels {
+
+.wheels {
   animation: truck 4s 0.001s ease infinite;
 }
-body .truck:before {
+
+.truck:before {
   animation: wind 1.5s 0s ease infinite;
 }
+
 @keyframes tree {
   0% {
     transform: translate(1350px);
@@ -206,6 +262,29 @@ body .truck:before {
   100% {
     transform: translateX(-2000px);
   }
+}
+/***********  ANIMATION FIN ***************/
+@media (min-width: 765px) {
+  .choosemenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnementContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+* {
+  font-family: Roboto;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
 }
 body header .mainTitle h1 {
   text-align: center;
@@ -387,46 +466,4 @@ body .restaurants .cardContain .menuCard h3 {
 }
 body .restaurants .cardContain .menuCard span {
   padding-bottom: 12px;
-}
-
-footer {
-  background-color: #353535;
-}
-footer * {
-  color: white;
-}
-footer p,
-footer h1 {
-  margin: 0;
-}
-footer p {
-  padding-bottom: 7px;
-}
-footer h1 {
-  font-family: Shrikhand;
-  font-size: 18px;
-  font-weight: 400;
-  padding-bottom: 16px;
-}
-footer .footerLayout {
-  padding: 23px;
-  padding-bottom: 22px;
-}
-footer .footerLayout .fa-handshake-angle {
-  font-size: 11px;
-}
-footer .footerLayout i {
-  padding-right: 10px;
-}
-
-@media (min-width: 765px) {
-  .choosemenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .fonctionnementContainer {
-    display: flex;
-    justify-content: space-evenly;
-  }
 }/*# sourceMappingURL=main.css.map */

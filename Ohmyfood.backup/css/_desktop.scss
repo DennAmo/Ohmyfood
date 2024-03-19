@@ -1,0 +1,12 @@
+@media (min-width:765px) {
+    .choosemenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .fonctionnementContainer {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }

@@ -1,29 +1,29 @@
 footer {
     background-color: #353535;
-    padding: 23px;
-    padding-bottom: 22px;
-    
+  
     * {
       color: white;
     }
-
-    .footer__paragraph,
-    .footer__title {
+  
+    p,
+    h1 {
       margin: 0;
     }
   
-    .footer__paragraph {
+    p {
       padding-bottom: 7px;
     }
   
-    .footer__title {
+    h1 {
       font-family: $title-font;
       font-size: 18px;
       font-weight: 400;
       padding-bottom: 16px;
     }
   
-
+    .footerLayout {
+      padding: 23px;
+      padding-bottom: 22px;
   
       .fa-handshake-angle {
         font-size: 11px;
@@ -32,5 +32,5 @@ footer {
       i {
         padding-right: 10px;
       }
-
+    }
   }

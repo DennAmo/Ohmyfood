@@ -25,8 +25,6 @@ body {
 
   header {
 
-    .mainTitle {
-
       h1 {
         text-align: center;
         font-family: $title-font;
@@ -37,7 +35,7 @@ body {
         padding-bottom: 30px;
       }
 
-      .location {
+      .location_bar {
         justify-content: center;
         display: flex;
         align-items: center;
@@ -46,23 +44,36 @@ body {
         box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
         position: relative;
       }
-    }
   }
 
-  h2 {
-    padding-top: 50px;
-    margin: 0px;
-    padding-left: 20px;
-  }
+ 
 
 
-  .viewMore {
+  .explore {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: $grey-background;
     padding-bottom: 52px;
 
+    .explore_btn {
+      width: 218px;
+      height: 50px;
+      background: $exploreBtn-background;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      border-width: 0px;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      
+      span {
+        color: $white-font;
+        font-size: 15px;
+      }
+    }
 
     h2 {
       margin: 0px;
@@ -77,30 +88,13 @@ body {
     }
   }
 
-  .explore {
-    width: 218px;
-    height: 50px;
-    background: $exploreBtn-background;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    border-width: 0px;
-    text-decoration: none;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .explore:hover {
+  .explore_btn:hover {
     background: $exploreBtn-hover;
   }
 
-  .explore span {
-    color: $white-font;
-    font-size: 15px;
-  }
+  
 
-  .chooseMenu {
+  .fonctionnement {
     margin-bottom: 68px;
 
     h2 {
@@ -108,11 +102,11 @@ body {
       padding-bottom: 25px;
     }
 
-    .fonctionnementContainer {
+    .fonctionnement_container {
       padding-right: 50px;
     }
 
-    .fonctionnementLayout {
+    .fonctionnement_layout {
       margin-left: 32px;
       display: flex;
       align-items: center;
@@ -167,7 +161,7 @@ body {
       color: inherit;
     }
 
-    .cardContain {
+    .restaurants_cards_container {
 
       position: relative;
 
@@ -195,7 +189,7 @@ body {
         display: none;
       }
 
-      .menuCard {
+      .restaurants_cards {
         position: relative;
         margin: 20px;
         display: flex;
@@ -210,7 +204,7 @@ body {
           object-fit: cover;
         }
 
-        .newBadge {
+        .restaurants_newBadge {
           font-size: 14px;
           font-weight: 500;
           display: flex;

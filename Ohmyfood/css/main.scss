@@ -22,7 +22,7 @@ main {
 /***********  TRANSITION DE L'ANIMATION ***************/
 .content {
   opacity: 0;
-  animation: showContent 3s forwards; 
+  animation: showContent 3s forwards;
 }
 
 /* Animation pour afficher le contenu de la page après l'animation principale */
@@ -36,7 +36,7 @@ main {
   }
 
   100% {
-    opacity: 1; 
+    opacity: 1;
   }
 }
 
@@ -53,10 +53,10 @@ body {
     animation: hideLoader 3s forwards;
   }
 
-   /* Animation pour faire disparaitre "l'écran de chargement" */
+  /* Animation pour faire disparaitre "l'écran de chargement" */
   @keyframes hideLoader {
     0% {
-      opacity: 1; 
+      opacity: 1;
     }
 
     100% {
@@ -369,7 +369,7 @@ body {
   }
 
   .explore:hover {
-      background: $exploreBtn-hover;
+    background: $exploreBtn-hover;
   }
 
   .explore span {

@@ -113,18 +113,16 @@ body .menu #selectionMenu3:checked + label #validation {
   transition: 1.5s;
 }
 body .menu #selectionMenu:checked + label .euro,
-body .menu #selectionMenu2:checked + label .euro {
-  transform: translateX(-48px);
-  font-size: 14px;
-}
+body .menu #selectionMenu2:checked + label .euro,
 body .menu #selectionMenu3:checked + label .euro {
-  position: absolute;
-  top: 15px;
-  right: 60px;
+  transform: translateX(-48px);
 }
-body .menu #selectionMenu:checked + label span, body .menu p,
-body .menu #selectionMenu2:checked + label span, body .menu p,
-body .menu #selectionMenu3:checked + label span, body .menu p {
+body .menu #selectionMenu:checked + label span,
+body .menu p,
+body .menu #selectionMenu2:checked + label span,
+body .menu p,
+body .menu #selectionMenu3:checked + label span,
+body .menu p {
   font-size: 15px;
 }
 body .menu input {

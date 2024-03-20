@@ -113,7 +113,7 @@ body {
         margin-bottom: 68px;
 
         &__title {
-            margin-left: 20px;
+            margin-left: 32px;
             padding-bottom: 25px;
         }
 
@@ -177,82 +177,91 @@ body {
         background-color: $grey-background;
         padding-bottom: 66px;
 
-        .restaurants__title {
+        &__title {
             margin: 0px;
             padding-top: 39px;
             font-size: 22px;
+            padding-left: 20px;
         }
 
-        .restaurants_cards_container {
+        &_cards_container {
 
             position: relative;
+        }
 
-            .restaurants__iconHeart {
-                position: absolute;
-                font-weight: 100;
-                font-size: 30px;
-                cursor: pointer;
-                bottom: 20px;
-                right: 40px;
+        &__card-badge {
+
+            &--layout {
+                font-size: 14px;
+                font-weight: 500;
+                margin: 15px;
+                color: #008766;
+                background-color: #99E2D0;
+                border-radius: 2px;
             }
 
-            .restaurants__iconHeart:hover {
-                background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-weight: 900;
-            }
-
-
-
-            .restaurants__cards {
-                position: relative;
-                margin: 20px;
+            &--position {
                 display: flex;
-                flex-direction: column;
-                border-radius: 20px;
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-
-
-                .restaurants__card-image {
-                    height: 231px;
-                    border-radius: 20px 20px 0px 0px;
-                    object-fit: cover;
-                }
-
-                .restaurants__card-badge {
-                    font-size: 14px;
-                    font-weight: 500;
-                    display: flex;
-                    align-items: center;
-                    position: absolute;
-                    margin: 15px;
-                    color: #008766;
-                    text-align: center;
-                    background-color: #99E2D0;
-                    border-radius: 2px;
-                    right: 0%;
-                    z-index: 1;
-                    padding: 9px;
-                }
-
-                .restaurants__card-location,
-                .restaurants__card-title {
-                    margin: 0px;
-                    padding-left: 13px;
-                }
-
-                .restaurants__card-title {
-                    padding-top: 16px;
-                    padding-bottom: 3px
-                }
-
-                .restaurants__card-location {
-                    padding-bottom: 12px;
-                }
+                align-items: center;
+                position: absolute;
+                text-align: center;
+                right: 0%;
+                z-index: 1;
+                padding: 9px;
             }
         }
+
+        &__iconHeart {
+            position: absolute;
+            font-weight: 100;
+            font-size: 30px;
+            cursor: pointer;
+            bottom: 20px;
+            right: 40px;
+        }
+
+        &__iconHeart:hover {
+            background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+        }
+
+
+
+        &__cards {
+            position: relative;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+
+        }
+
+        &__card-image {
+            height: 231px;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover;
+        }
+
+        &__card-location,
+        &__card-title {
+            margin: 0px;
+            padding-left: 13px;
+        }
+
+        &__card-title {
+            padding-top: 16px;
+            padding-bottom: 3px
+        }
+
+        &__card-location {
+            padding-bottom: 12px;
+        }
+
+
     }
 
 }

@@ -2,34 +2,32 @@ footer {
     background-color: #353535;
     padding: 23px;
     padding-bottom: 22px;
-    
+
     * {
       color: white;
     }
 
-    .footer__paragraph,
-    .footer__title {
-      margin: 0;
-    }
-  
-    .footer__paragraph {
-      padding-bottom: 7px;
-    }
-  
-    .footer__title {
+    &__title {
       font-family: $title-font;
       font-size: 18px;
       font-weight: 400;
       padding-bottom: 16px;
     }
-  
 
-  
+    &__paragraph {
+      padding-bottom: 7px;
+    }
+    
+    &__paragraph,
+    &__title {
+      margin: 0;
+    }
+
       .fa-handshake-angle {
         font-size: 11px;
       }
   
-      i {
+      .fa-solid {
         padding-right: 10px;
       }
 

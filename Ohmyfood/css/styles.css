@@ -7,23 +7,22 @@ footer {
 footer * {
   color: white;
 }
-footer .footer__paragraph,
-footer .footer__title {
-  margin: 0;
-}
-footer .footer__paragraph {
-  padding-bottom: 7px;
-}
-footer .footer__title {
+footer__title {
   font-family: Shrikhand;
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 16px;
 }
+footer__paragraph {
+  padding-bottom: 7px;
+}
+footer__paragraph, footer__title {
+  margin: 0;
+}
 footer .fa-handshake-angle {
   font-size: 11px;
 }
-footer i {
+footer .fa-solid {
   padding-right: 10px;
 }
 
@@ -353,7 +352,7 @@ body .fonctionnement {
   margin-bottom: 68px;
 }
 body .fonctionnement__title {
-  margin-left: 20px;
+  margin-left: 32px;
   padding-bottom: 25px;
 }
 body .fonctionnement_container {
@@ -402,15 +401,33 @@ body .restaurants {
   background-color: #F6F6F6;
   padding-bottom: 66px;
 }
-body .restaurants .restaurants__title {
+body .restaurants__title {
   margin: 0px;
   padding-top: 39px;
   font-size: 22px;
+  padding-left: 20px;
 }
-body .restaurants .restaurants_cards_container {
+body .restaurants_cards_container {
   position: relative;
 }
-body .restaurants .restaurants_cards_container .restaurants__iconHeart {
+body .restaurants__card-badge--layout {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 15px;
+  color: #008766;
+  background-color: #99E2D0;
+  border-radius: 2px;
+}
+body .restaurants__card-badge--position {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  right: 0%;
+  z-index: 1;
+  padding: 9px;
+}
+body .restaurants__iconHeart {
   position: absolute;
   font-weight: 100;
   font-size: 30px;
@@ -418,14 +435,14 @@ body .restaurants .restaurants_cards_container .restaurants__iconHeart {
   bottom: 20px;
   right: 40px;
 }
-body .restaurants .restaurants_cards_container .restaurants__iconHeart:hover {
+body .restaurants__iconHeart:hover {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 900;
 }
-body .restaurants .restaurants_cards_container .restaurants__cards {
+body .restaurants__cards {
   position: relative;
   margin: 20px;
   display: flex;
@@ -433,36 +450,20 @@ body .restaurants .restaurants_cards_container .restaurants__cards {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-body .restaurants .restaurants_cards_container .restaurants__cards .restaurants__card-image {
+body .restaurants__card-image {
   height: 231px;
   border-radius: 20px 20px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .restaurants .restaurants_cards_container .restaurants__cards .restaurants__card-badge {
-  font-size: 14px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  margin: 15px;
-  color: #008766;
-  text-align: center;
-  background-color: #99E2D0;
-  border-radius: 2px;
-  right: 0%;
-  z-index: 1;
-  padding: 9px;
-}
-body .restaurants .restaurants_cards_container .restaurants__cards .restaurants__card-location,
-body .restaurants .restaurants_cards_container .restaurants__cards .restaurants__card-title {
+body .restaurants__card-location, body .restaurants__card-title {
   margin: 0px;
   padding-left: 13px;
 }
-body .restaurants .restaurants_cards_container .restaurants__cards .restaurants__card-title {
+body .restaurants__card-title {
   padding-top: 16px;
   padding-bottom: 3px;
 }
-body .restaurants .restaurants_cards_container .restaurants__cards .restaurants__card-location {
+body .restaurants__card-location {
   padding-bottom: 12px;
 }/*# sourceMappingURL=styles.css.map */

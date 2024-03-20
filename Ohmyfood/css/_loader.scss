@@ -1,5 +1,6 @@
 /*animation color*/
-$hill-mountain: #9356DC;
+$mainColor: #9356DC;
+$loaderButton: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
 
 
 /***********  TRANSITION DE L'ANIMATION ***************/
@@ -47,7 +48,7 @@ main, header, footer {
 
   .loop {
     margin: 0 auto;
-    background: $hill-mountain;
+    background: $mainColor;
     position: relative;
     display: flex;
     width: 100%;
@@ -63,7 +64,7 @@ main, header, footer {
 .loader_button {
     width: 300px;
     height: 70px;
-    background: $exploreBtn-background;
+    background: $loaderButton;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     border-width: 0px;
@@ -88,12 +89,12 @@ font-weight: 400;
     width: 2px;
     height: 2px;
     box-shadow:
-      0 0 0 50px $hill-mountain,
-      60px 50px 0 70px $hill-mountain,
-      90px 90px 0 50px $hill-mountain,
-      250px 250px 0 50px $hill-mountain,
-      290px 320px 0 50px $hill-mountain,
-      320px 400px 0 50px $hill-mountain;
+      0 0 0 50px $mainColor,
+      60px 50px 0 70px $mainColor,
+      90px 90px 0 50px $mainColor,
+      250px 250px 0 50px $mainColor,
+      290px 320px 0 50px $mainColor,
+      320px 400px 0 50px $mainColor;
     transform: rotate(130deg);
     animation: mtn 20s linear infinite;
   }
@@ -106,12 +107,12 @@ font-weight: 400;
     border-radius: 50%;
     height: 20px;
     box-shadow:
-      0 0 0 50px $hill-mountain,
-      -20px 0 0 20px $hill-mountain,
-      -90px 0 0 50px $hill-mountain,
-      250px 0 0 50px $hill-mountain,
-      290px 0 0 50px $hill-mountain,
-      620px 0 0 50px $hill-mountain;
+      0 0 0 50px $mainColor,
+      -20px 0 0 20px $mainColor,
+      -90px 0 0 50px $mainColor,
+      250px 0 0 50px $mainColor,
+      290px 0 0 50px $mainColor,
+      620px 0 0 50px $mainColor;
     animation: hill 4s 2s linear infinite;
   }
 

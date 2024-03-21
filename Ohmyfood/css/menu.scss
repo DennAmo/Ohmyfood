@@ -10,6 +10,8 @@ $white_font: white;
     font-family: $main-font;
 }
 
+
+
 body {
     margin: 0px;
 
@@ -55,7 +57,7 @@ body {
 
     footer {
         position: relative;
-        top: 1050px;
+        top: 1150px;
     }
 
     main {
@@ -73,8 +75,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto;
-            margin-top: 40px;
+            margin: 0;
 
 
             &--layout {
@@ -133,15 +134,10 @@ body {
             padding-right: 25px;
         }
 
-        input {
-            display: none;
+        &__entries {
+            padding-bottom: 40px;
         }
 
-
-
-        &_entries {
-            width: 100%;
-        }
 
         &_entriesTitle {
             margin: 0px;
@@ -179,9 +175,6 @@ body {
 
         }
 
-        input {
-            display: none;
-        }
 
         &__plats {
             display: flex;
@@ -197,8 +190,9 @@ body {
             span {
                 font-family: $main-font;
                 font-size: 18px;
-                font-weight: 700;
+                font-weight: 700
             }
+
         }
 
         &__plats:hover .menu__circleIcon {
@@ -213,18 +207,12 @@ body {
             flex-direction: column;
             gap: 5px;
 
-            &-text {
-                font-family: $main-font;
-                font-size: 18px;
-                font-weight: 700;
-
-            }
-
             &-p {
                 font-family: $main-font;
                 font-size: 15.043px;
                 font-weight: 300;
                 margin: 0;
+                text-overflow: ellipsis;
             }
         }
 

@@ -69,7 +69,7 @@ body .header__logoText {
 }
 body footer {
   position: relative;
-  top: 1050px;
+  top: 1150px;
 }
 body main {
   position: absolute;
@@ -85,8 +85,7 @@ body .menu__buttonCommand {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 0;
 }
 body .menu__buttonCommand--layout {
   width: 40%;
@@ -132,11 +131,8 @@ body .menu__titleText {
   padding-left: 17px;
   padding-right: 25px;
 }
-body .menu input {
-  display: none;
-}
-body .menu_entries {
-  width: 100%;
+body .menu__entries {
+  padding-bottom: 40px;
 }
 body .menu_entriesTitle {
   margin: 0px;
@@ -170,9 +166,6 @@ body .menu__circleIcon {
   border-radius: 0px 15px 15px 0px;
   opacity: 0;
 }
-body .menu input {
-  display: none;
-}
 body .menu__plats {
   display: flex;
   margin: 10px;
@@ -198,16 +191,12 @@ body .menu__leftColumn {
   flex-direction: column;
   gap: 5px;
 }
-body .menu__leftColumn-text {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
-}
 body .menu__leftColumn-p {
   font-family: Roboto;
   font-size: 15.043px;
   font-weight: 300;
   margin: 0;
+  text-overflow: ellipsis;
 }
 body .menu__rightColumn {
   display: flex;

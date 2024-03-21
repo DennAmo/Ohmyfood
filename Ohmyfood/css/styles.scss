@@ -20,9 +20,7 @@ a {
     font-family: $main-font;
 }
 
-main {
-    overflow-x: hidden;
-}
+
 
 body {
     margin: 0;
@@ -221,7 +219,7 @@ body {
         }
 
         &__iconHeart:hover {
-            background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+            background-image: linear-gradient(to top, #9356DC, #FF79DA);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;

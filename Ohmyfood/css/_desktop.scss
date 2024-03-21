@@ -1,12 +1,52 @@
-@media (min-width:765px) {
-    .choosemenu {
+@media (min-width:767px) {
+    .fonctionnement {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-  
-    .fonctionnementContainer {
+      padding-left: 180px;
+      padding-right: 180px;
+
+    &_container {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
+      width: 100%;
+  }
+
+  &__step {
+
+    &--layout {
+       min-width: 212px;
+    }
+}
+}
+
+
+  .restaurants {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    &__title {
+      padding-right: 20px;
+      padding-left: 110px;
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
+    &__paragraph {
+      padding-left: 20px;
+      padding-bottom: 0;
+    }
+    &__container {
+      display: flex;
     }
   }
+
+  .menu {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+}

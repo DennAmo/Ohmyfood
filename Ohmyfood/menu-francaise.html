@@ -7,7 +7,6 @@
     <title>ohmyfood</title>
     <meta name="description" content="Description de la page">
     <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -16,52 +15,149 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <a href="index.html"><i class="fa-solid fa-arrow-left fa-lg"></i>
-            </a>
-            <div class="mainTitle">
-                <h1>ohmyfood</h1>
-            </div>
-        </header>
-        <img class="menuImg" src="./images/restaurants/rest1.jpg" alt="">
+    <header class="header">
+        <a class="header__previous" href="index.html"><i class="header__previousIcon fa-solid fa-arrow-left fa-lg"></i>
+        </a>
+        <h2 class="header__logoText">ohmyfood</h2>
+
+    </header>
+    <img class="header__image" src="./images/restaurants/rest3.jpg" alt="">
+
+    <main class="main">
+
+
         <section class="menu">
-            <div class="menuContainer">
-                <div class="favorite">
-                    <h2>La palette du goût</h2>
-                    <input type="checkbox" id="heartCheckbox" class="hidden-checkbox">
-                    <label for="heartCheckbox">
-                        <i class="fa-solid fa-heart fa-2x" id="heartIcon"></i>
-                    </label>
+            <div class="menu__title">
+                <h3 class=" menu__titleText">À la française</h3>
+                <i class="fa-solid fa-heart fa-2x menu__heartIcon"></i>
+            </div>
+            <div class="menu__entries">
+                <h3 class="menu_entriesTitle">ENTRÉES</h3>
+                <div class="menu__plats">
+                    <div class="menu__leftColumn">
+                        <span class="menu__leftColumn-span">Tartare de poulpe acidulé
+                        </span>
+                        <p class="menu__leftColumn-p">Aux zestes d'orange
+                        </p>
+                    </div>
+                    <div class="menu__rightColumn"><span class="euro"> 25€</span>
+                    </div>
+                    <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
                 </div>
-                <div class="menuStart">
-                    <h3>ENTRÉES</h3>
-                    <div class="entries">
-                        <div class="leftColumn">
-                            <span>Fricassée d'escargots</span>
-                            <p>Au piment d'Espelette</p>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-plats">Velouté de légumes d'antan
+                            </span>
+                            <p class="menu__leftColumn-p">Carotte, panais, topinambour
+                            </p>
                         </div>
-                        <div class="rightColumn"><span> 25€</span>
+                        <div class="menu__rightColumn"><span class="euro">35€</span>
                         </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
                     </div>
-                    <div class="entries">
-                        <div class="leftColumn">
-                            <span>Foie gras de canard mi-cuit</span>
-                            <p>Et ses copeaux de truffe noire</p>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-text">Soupe à l'oignon
+                            </span>
+                            <p class="menu__leftColumn-p">Revisitée
+                            </p>
                         </div>
-                        <div class="rightColumn"><span>35€</span>
+                        <div class="menu__rightColumn"><span class="euro">20€</span>
                         </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
                     </div>
-                    <div class="entries">
-                        <div class="leftColumn">
-                            <span>Œuf au plat</span>
-                            <p>Assaisonné à la truffe sur lit de caviar</p>
+            </div>
+
+
+            <div class="menu__entries">
+                <h3 class="menu_entriesTitle">PLATS</h3>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu__leftColumn-span">Coquilles Saint-Jacques
+                            </span>
+                            <p class="menu__leftColumn-p">Accompagnées d'une purée de panais
+                            </p>
                         </div>
-                        <div class="rightColumn"><span>20€</span>
+                        <div class="menu__rightColumn"><span class="euro">40€</span>
                         </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
                     </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-plats">Magret de canard
+                            </span>
+                            <p class="menu__leftColumn-p">Et parmentier de pommes de terre
+                            </p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">35€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-text">Pigeonneau d’Ille-et-Vilaine
+                            </span>
+                            <p class="menu__leftColumn-p">Sur son lit de gnocchis aux légumes
+                            </p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">44€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+            </div>
+
+
+            <div class="menu__entries">
+                <h3 class="menu_entriesTitle">DESSERTS</h3>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu__leftColumn-span">Pétales de violettes glacés
+                            </span>
+                            <p class="menu__leftColumn-p">Et purée de noisettes
+                            </p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">18€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-plats">Fondant au chocolat
+                            </span>
+                            <p class="menu__leftColumn-p">Revisité
+                            </p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">22€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                <div class="menu__plats">
+                    <div class="menu__leftColumn">
+                        <span class="menu_leftColumn-text">Millefeuille croustillant
+                        </span>
+                        <p class="menu__leftColumn-p">Myrtilles et pâte d’amande
+                        </p>
+                    </div>
+                    <div class="menu__rightColumn"><span class="euro">23€</span>
+                    </div>
+                    <i class="fa-solid fa-circle-check fa-lg menu__circleIcon"></i>
                 </div>
             </div>
+                            <div class="menu__buttonCommand">
+                    <a class="menu__buttonCommand--layout menu__buttonCommand--direction" href="#">
+                        <span class="menu__buttonCommand--text">Commander</span>
+                    </a>
+                </div>
+
         </section>
     </main>
+    <footer>
+        <h1 class="footer__title">ohmyfood</h1>
+        <p class="footer__paragraph"><i class="fa-solid fa-utensils"></i>Proposez un restaurant</p>
+        <p class="footer__paragraph"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+        <p class="footer__paragraph">Mentions légales</p>
+        <p class="footer__paragraph">Contact</p>
+    </footer>
 </body>
+
+</html>

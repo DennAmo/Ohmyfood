@@ -36,17 +36,25 @@ body .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+body .header__image {
+  height: 275px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .header__previous {
+  position: absolute;
   text-decoration: none;
-  width: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   margin-right: auto;
-}
-body .header__previousIcon {
+  color: inherit;
   cursor: pointer;
+  padding-left: 17px;
 }
 body .header__logoText {
   display: flex;
@@ -59,27 +67,63 @@ body .header__logoText {
   padding-bottom: 14px;
   flex-grow: 1;
 }
-body .menu__image {
-  height: 275px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  bottom: 0px;
+body footer {
+  position: relative;
+  top: 1050px;
 }
-body .menu__Container {
+body main {
+  position: absolute;
+  top: 323px;
+  width: 100%;
+}
+body .menu {
   background-color: #F6F6F6;
   border-radius: 25px 25px 0px 0px;
-  width: 100%;
-  top: -30px;
+  padding-bottom: 90px;
+}
+body .menu__buttonCommand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+body .menu__buttonCommand--layout {
+  width: 40%;
+  height: 50px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  border-width: 0px;
+  text-decoration: none;
+}
+body .menu__buttonCommand--layout:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+body .menu__buttonCommand--direction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .menu__buttonCommand--text {
+  color: white;
+  font-size: 15px;
+}
+body .menu__heartIcon {
+  font-weight: 100;
+  font-size: 30px;
+  cursor: pointer;
+}
+body .menu__heartIcon:hover {
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
 }
 body .menu__title {
   display: flex;
   align-items: center;
-}
-body .menu #menu__heartIcon {
-  font-weight: 100;
-  font-size: 30px;
-  cursor: pointer;
 }
 body .menu__titleText {
   font-family: Shrikhand;
@@ -87,13 +131,6 @@ body .menu__titleText {
   font-weight: 400;
   padding-left: 17px;
   padding-right: 25px;
-}
-body .menu #menu__heartCheckbox:checked + label #menu__heartIcon {
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: 900;
 }
 body .menu input {
   display: none;
@@ -133,17 +170,6 @@ body .menu__circleIcon {
   border-radius: 0px 15px 15px 0px;
   opacity: 0;
 }
-body .menu #selectionMenu:checked + label #validation,
-body .menu #selectionMenu2:checked + label #validation,
-body .menu #selectionMenu3:checked + label #validation {
-  opacity: 1;
-  transition: 1.5s;
-}
-body .menu #selectionMenu:checked + label .euro,
-body .menu #selectionMenu2:checked + label .euro,
-body .menu #selectionMenu3:checked + label .euro {
-  transform: translateX(-48px);
-}
 body .menu input {
   display: none;
 }
@@ -158,17 +184,26 @@ body .menu__plats {
   cursor: pointer;
   position: relative;
 }
+body .menu__plats span {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+}
+body .menu__plats:hover .menu__circleIcon {
+  opacity: 1;
+  transition: 1.5s;
+}
 body .menu__leftColumn {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-body .menu span {
+body .menu__leftColumn-text {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
 }
-body .menu p {
+body .menu__leftColumn-p {
   font-family: Roboto;
   font-size: 15.043px;
   font-weight: 300;
@@ -177,9 +212,4 @@ body .menu p {
 body .menu__rightColumn {
   display: flex;
   flex-direction: column-reverse;
-}
-body .menu span {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 700;
 }/*# sourceMappingURL=menu.css.map */

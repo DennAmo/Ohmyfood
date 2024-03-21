@@ -1,12 +1,14 @@
 $title-font: Shrikhand;
 $main-font: Roboto;
+$exploreBtn-background: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
+$exploreBtn-hover: #{linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%)};
+$white_font: white;
 
 @import "_footer.scss";
 
 * {
     font-family: $main-font;
 }
-
 
 body {
     margin: 0px;
@@ -15,18 +17,25 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        position: relative;
+
+        &__image {
+            height: 275px;
+            width: 100%;
+            object-fit: cover;
+        }
 
         &__previous {
+            position: absolute;
             text-decoration: none;
-            width: 24px;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
             margin-right: auto;
-        }
-
-        &__previousIcon {
+            color: inherit;
             cursor: pointer;
+            padding-left: 17px;
         }
 
         &__logoText {
@@ -41,36 +50,79 @@ body {
             flex-grow: 1;
         }
 
+
     }
 
+    footer {
+        position: relative;
+        top: 1050px;
+    }
 
+    main {
+        position: absolute;
+        top: 323px;
+                width: 100%;
+    }
 
     .menu {
+        background-color: #F6F6F6;
+        border-radius: 25px 25px 0px 0px;
+        padding-bottom: 90px;
 
-        &__image {
-            height: 275px;
-            width: 100%;
-            object-fit: cover;
-            bottom: 0px;
+        &__buttonCommand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 40px;
+
+
+            &--layout {
+                width: 40%;
+                height: 50px;
+                background: $exploreBtn-background;
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                border-radius: 25px;
+                border-width: 0px;
+                text-decoration: none;
+
+                &:hover {
+                    background: $exploreBtn-hover;
+                }
+            }
+
+            &--direction {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+            }
+
+            &--text {
+                color: $white-font;
+                font-size: 15px;
+            }
+
         }
 
+        &__heartIcon {
+            font-weight: 100;
+            font-size: 30px;
+            cursor: pointer;
 
-        &__Container {
-            background-color: #F6F6F6;
-            border-radius: 25px 25px 0px 0px;
-            width: 100%;
-            top: -30px;
+            &:hover {
+                background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-weight: 900;
+            }
         }
 
         &__title {
             display: flex;
             align-items: center;
-        }
-
-        #menu__heartIcon {
-            font-weight: 100;
-            font-size: 30px;
-            cursor: pointer;
         }
 
         &__titleText {
@@ -79,14 +131,6 @@ body {
             font-weight: 400;
             padding-left: 17px;
             padding-right: 25px;
-        }
-
-        #menu__heartCheckbox:checked+label #menu__heartIcon {
-            background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-weight: 900;
         }
 
         input {
@@ -132,21 +176,7 @@ body {
             justify-content: center;
             border-radius: 0px 15px 15px 0px;
             opacity: 0;
-        }
 
-
-
-        #selectionMenu:checked+label #validation,
-        #selectionMenu2:checked+label #validation,
-        #selectionMenu3:checked+label #validation {
-            opacity: 1;
-            transition: 1.5s;
-        }
-
-        #selectionMenu:checked+label .euro,
-        #selectionMenu2:checked+label .euro,
-        #selectionMenu3:checked+label .euro {
-            transform: translateX(-48px);
         }
 
         input {
@@ -163,39 +193,46 @@ body {
             justify-content: space-between;
             cursor: pointer;
             position: relative;
+
+            span {
+                font-family: $main-font;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        &__plats:hover .menu__circleIcon {
+
+            opacity: 1;
+            transition: 1.5s;
+
         }
 
         &__leftColumn {
             display: flex;
             flex-direction: column;
             gap: 5px;
+
+            &-text {
+                font-family: $main-font;
+                font-size: 18px;
+                font-weight: 700;
+
+            }
+
+            &-p {
+                font-family: $main-font;
+                font-size: 15.043px;
+                font-weight: 300;
+                margin: 0;
+            }
         }
-
-        span {
-            font-family: $main-font;
-            font-size: 18px;
-            font-weight: 700;
-
-        }
-
-        p {
-            font-family: $main-font;
-            font-size: 15.043px;
-            font-weight: 300;
-            margin: 0;
-        }
-
 
         &__rightColumn {
             display: flex;
             flex-direction: column-reverse;
         }
 
-        span {
-            font-family: $main-font;
-            font-size: 18px;
-            font-weight: 700;
-        }
 
 
     }

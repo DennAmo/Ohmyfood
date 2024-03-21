@@ -7,7 +7,6 @@
     <title>ohmyfood</title>
     <meta name="description" content="Description de la page">
     <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -19,89 +18,125 @@
     <header class="header">
         <a class="header__previous" href="index.html"><i class="header__previousIcon fa-solid fa-arrow-left fa-lg"></i>
         </a>
-        <h2 class="header__logoText">ohmyfood</h>
+        <h2 class="header__logoText">ohmyfood</h2>
+
     </header>
-    <main>
+    <img class="header__image" src="./images/restaurants/rest1.jpg" alt="">
 
-
-
+    <main class="main">
 
         <section class="menu">
-            <img class="menu__image" src="./images/restaurants/rest1.jpg" alt="">
-            <div class="menu__Container">
-                <div class="menu__title">
-                    <h3 class=" menu__titleText">La palette du goût</h3>
-                    <input type="checkbox" id="menu__heartCheckbox" class="menu__hidden-checkbox">
-                    <label for="menu__heartCheckbox">
-                        <i class="fa-solid fa-heart fa-2x" id="menu__heartIcon"></i>
-                    </label>
+            <div class="menu__title">
+                <h3 class=" menu__titleText">La palette du goût</h3>
+                <i class="fa-solid fa-heart fa-2x menu__heartIcon"></i>
+            </div>
+            <div class="menu__entries">
+                <h3 class="menu_entriesTitle">ENTRÉES</h3>
+                <div class="menu__plats">
+                    <div class="menu__leftColumn">
+                        <span class="menu__leftColumn-span">Fricassée d'escargots</span>
+                        <p class="menu__leftColumn-p">Au piment d'Espelette</p>
+                    </div>
+                    <div class="menu__rightColumn"><span class="euro"> 25€</span>
+                    </div>
+                    <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
                 </div>
-                <div class="menu__entries">
-                    <h3 class="menu_entriesTitle">ENTRÉES</h3>
-                    <input type="checkbox" id="selectionMenu" class="hidden-checkbox">
-                    <label for="selectionMenu">
-                        <div class="menu__plats">
-                            <div class="menu__leftColumn">
-                                <span>Fricassée d'escargots</span>
-                                <p>Au piment d'Espelette</p>
-                            </div>
-                            <div class="menu__rightColumn"><span class="euro"> 25€</span>
-                            </div>
-                            <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-plats">Foie gras de canard mi-cuit</span>
+                            <p class="menu__leftColumn-p">Et ses copeaux de truffe noire</p>
                         </div>
-                    </label>
-                    <input type="checkbox" id="selectionMenu2" class="hidden-checkbox">
-                    <label for="selectionMenu2">
-                        <div class="menu__plats">
-                            <div class="menu__leftColumn">
-                                <span>Foie gras de canard mi-cuit</span>
-                                <p>Et ses copeaux de truffe noire</p>
-                            </div>
-                            <div class="menu__rightColumn"><span class="euro">35€</span>
-                            </div>
-                            <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                        <div class="menu__rightColumn"><span class="euro">35€</span>
                         </div>
-                    </label>
-                    <input type="checkbox" id="selectionMenu3" class="hidden-checkbox">
-                    <label for="selectionMenu3">
-                        <div class="menu__plats">
-                            <div class="menu__leftColumn">
-                                <span>Œuf au plat</span>
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
-                            </div>
-                            <div class="menu__rightColumn"><span class="euro">20€</span>
-                            </div>
-                            <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-text">Œuf au plat</span>
+                            <p class="menu__leftColumn-p">Assaisonné à la truffe sur lit de caviar</p>
                         </div>
-                    </label>
+                        <div class="menu__rightColumn"><span class="euro">20€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+            </div>
+
+
+            <div class="menu__entries">
+                <h3 class="menu_entriesTitle">PLATS</h3>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu__leftColumn-span">Filet de bœuf aux herbes</span>
+                            <p class="menu__leftColumn-p">Accompagné de sa ribambelle de légumes</p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">40€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-plats">Parmentier de queue de bœuf</span>
+                            <p class="menu__leftColumn-p">À la truffe noire sur sa purée de panais</p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">35€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-text">Filet de turbot</span>
+                            <p class="menu__leftColumn-p">Aux agrumes</p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">44€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+            </div>
+
+
+            <div class="menu__entries">
+                <h3 class="menu_entriesTitle">Desserts</h3>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu__leftColumn-span">Paris-Brest
+                            </span>
+                            <p class="menu__leftColumn-p">Revisité
+                            </p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">18€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                    <div class="menu__plats">
+                        <div class="menu__leftColumn">
+                            <span class="menu_leftColumn-plats">Macaron au chocolat d'exception 
+                            </span>
+                            <p class="menu__leftColumn-p">Et glace à la vanille de Madagascar
+                            </p>
+                        </div>
+                        <div class="menu__rightColumn"><span class="euro">22€</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check fa-lg menu__circleIcon" id="validation"></i>
+                    </div>
+                <div class="menu__plats">
+                    <div class="menu__leftColumn">
+                        <span class="menu_leftColumn-text">Mousse au chocolat 
+                        </span>
+                        <p class="menu__leftColumn-p">Au piment d'Espelette et à la truffe noire
+                        </p>
+                    </div>
+                    <div class="menu__rightColumn"><span class="euro">23€</span>
+                    </div>
+                    <i class="fa-solid fa-circle-check fa-lg menu__circleIcon"></i>
                 </div>
             </div>
+                            <div class="menu__buttonCommand">
+                    <a class="menu__buttonCommand--layout menu__buttonCommand--direction" href="#">
+                        <span class="menu__buttonCommand--text">Commander</span>
+                    </a>
+                </div>
+
         </section>
-        Plats
-        Filet de bœuf aux herbes
-        Accompagné de sa ribambelle de légumes
-        40€
-
-        Parmentier de queue de bœuf
-        À la truffe noire sur sa purée de panais
-        35€
-
-        Filet de turbot
-        Aux agrumes
-        44€
-
-        Desserts
-        Paris-Brest
-        Revisité
-        18€
-
-        Macaron au chocolat d'exception
-        Et glace à la vanille de Madagascar
-        22€
-
-        Mousse au chocolat
-        Au piment d'Espelette et à la truffe noire
-        23€
     </main>
     <footer>
         <h1 class="footer__title">ohmyfood</h1>

@@ -133,6 +133,7 @@ body .menu__buttonCommand {
   align-items: center;
   justify-content: center;
   margin: 0;
+  padding-top: 30px;
 }
 body .menu__buttonCommand--layout {
   width: 40%;
@@ -159,6 +160,7 @@ body .menu__heartIcon {
   font-weight: 100;
   font-size: 30px;
   cursor: pointer;
+  transition: height 2s ease-in-out;
 }
 body .menu__heartIcon:hover {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
@@ -175,11 +177,7 @@ body .menu__titleText {
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
-  padding-left: 17px;
-  padding-right: 25px;
-}
-body .menu__entries {
-  padding-bottom: 40px;
+  margin: 20px;
 }
 body .menu_entriesTitle {
   margin: 0px;
@@ -189,6 +187,9 @@ body .menu_entriesTitle {
   padding-left: 17px;
   position: relative;
   margin-bottom: 15px;
+}
+body .menu__entries {
+  padding-top: 20px;
 }
 body .menu_entriesTitle::after {
   content: "";
@@ -200,12 +201,10 @@ body .menu_entriesTitle::after {
   left: 18px;
 }
 body .menu__plats {
-  display: flex;
   margin: 10px;
   background-color: white;
   border-radius: 15.043px;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
   cursor: pointer;
 }
 body .menu__plats span {
@@ -214,27 +213,25 @@ body .menu__plats span {
   font-weight: 700;
   white-space: nowrap;
 }
-body .menu__circleIcon {
+body .menu .menu__circleIcon {
   color: white;
   background-color: #99e2d0;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0px 15px 15px 0px;
-  display: none;
-  width: 0;
-  transition: width 1s ease;
+  width: 0px;
+  overflow: hidden;
+  transition: width 1s ease-in-out;
 }
-body .menu__plats:hover .menu__circleIcon {
-  display: flex;
+body .menu .menu__plats:hover .menu__circleIcon {
   width: 60px;
   text-overflow: ellipsis;
+  height: 100%;
 }
-body .menu__columnContainer {
+body .menu__columnContain {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 15px;
 }
 body .menu__leftColumn {
   display: flex;
@@ -242,6 +239,9 @@ body .menu__leftColumn {
   gap: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 body .menu__leftColumn__name {
   text-overflow: ellipsis;
@@ -256,6 +256,9 @@ body .menu__leftColumn-p {
 }
 body .menu__rightColumn {
   display: flex;
-  flex-direction: column-reverse;
-  padding-right: 15px;
+  align-items: flex-end;
+}
+body .menu__rightColumn span {
+  padding-bottom: 15px;
+  padding-right: 20px;
 }/*# sourceMappingURL=menu.css.map */

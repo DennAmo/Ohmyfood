@@ -26,10 +26,11 @@
 }
 
 /*animation color*/
-/***********  TRANSITION DE L'ANIMATION ***************/
-main, header, footer {
-  opacity: 0;
-  animation: showContent 3s forwards;
+/***********  TRANSITION DE CHARGEMENT ***************/
+main,
+header,
+footer {
+  animation: showContent 2.5s forwards;
 }
 
 /* Animation pour afficher le contenu de la page après l'animation principale */
@@ -41,11 +42,11 @@ main, header, footer {
     display: none;
   }
   100% {
-    opacity: 1;
+    display: inherit;
   }
 }
 .loader {
-  animation: hideLoader 3s forwards;
+  animation: hideLoader 2.5s forwards;
 }
 
 /* Animation pour faire disparaitre "l'écran de chargement" */
@@ -54,11 +55,10 @@ main, header, footer {
     opacity: 1;
   }
   100% {
-    opacity: 0;
     display: none;
   }
 }
-/***********  TRANSITION DE L'ANIMATION FIN ***************/
+/***********  TRANSITION DE CHARGEMENT FIN ***************/
 /***********  ANIMATION ***************/
 .loop {
   margin: 0 auto;
@@ -74,7 +74,7 @@ main, header, footer {
   align-items: center;
 }
 
-.loader_button {
+.loader__button {
   width: 300px;
   height: 70px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -88,7 +88,7 @@ main, header, footer {
   justify-content: center;
 }
 
-.loader_button h2 {
+.loader__button h2 {
   margin: 0px;
   padding: 0px;
   font-family: Shrikhand;
@@ -137,6 +137,16 @@ main, header, footer {
   background: #ddd;
 }
 
+.sun {
+  color: #FFD700;
+  top: 0px;
+  background-color: #9356DC;
+  position: absolute;
+  top: calc(90vh - 90px);
+  right: 20%;
+  transition: all ease;
+}
+
 .truck,
 .wheels {
   transition: all ease;
@@ -167,6 +177,10 @@ main, header, footer {
   margin-bottom: 0;
 }
 
+.sun {
+  animation: sun 4s 0s linear infinite;
+}
+
 .tree {
   animation: tree 3s 0s linear infinite;
 }
@@ -195,6 +209,14 @@ main, header, footer {
   animation: wind 1.5s 0s ease infinite;
 }
 
+@keyframes sun {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(-200px);
+  }
+}
 @keyframes tree {
   0% {
     transform: translate(1350px);

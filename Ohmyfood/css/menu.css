@@ -127,6 +127,7 @@ body .menu {
   background-color: #F6F6F6;
   border-radius: 25px 25px 0px 0px;
   padding-bottom: 45px;
+  white-space: nowrap;
 }
 body .menu__buttonCommand {
   display: flex;
@@ -161,6 +162,7 @@ body .menu__heartIcon {
   font-size: 30px;
   cursor: pointer;
   transition: height 2s ease-in-out;
+  transition: width 2s ease-in-out;
 }
 body .menu__heartIcon:hover {
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
@@ -181,15 +183,13 @@ body .menu__titleText {
 }
 body .menu_entriesTitle {
   margin: 0px;
+  padding-top: 20px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
   padding-left: 17px;
   position: relative;
   margin-bottom: 15px;
-}
-body .menu__entries {
-  padding-top: 20px;
 }
 body .menu_entriesTitle::after {
   content: "";
@@ -213,6 +213,9 @@ body .menu__plats span {
   font-weight: 700;
   white-space: nowrap;
 }
+body .menu__plats h4 {
+  margin: 0px;
+}
 body .menu .menu__circleIcon {
   color: white;
   background-color: #99e2d0;
@@ -223,10 +226,10 @@ body .menu .menu__circleIcon {
   width: 0px;
   overflow: hidden;
   transition: width 1s ease-in-out;
+  height: 100%;
 }
 body .menu .menu__plats:hover .menu__circleIcon {
   width: 60px;
-  text-overflow: ellipsis;
   height: 100%;
 }
 body .menu__columnContain {

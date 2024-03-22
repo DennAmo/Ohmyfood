@@ -72,10 +72,13 @@ body {
                
     }
 
+
+
     .menu {
         background-color: #F6F6F6;
         border-radius: 25px 25px 0px 0px;
         padding-bottom: 45px;
+        white-space: nowrap;
         
 
         &__buttonCommand {
@@ -120,15 +123,16 @@ body {
             font-size: 30px;
             cursor: pointer;
             transition: height 2s ease-in-out;
+            transition: width 2s ease-in-out;
 
             &:hover {
                 background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                font-weight: 900;
-               
+                font-weight: 900;               
             }
+            
         }
 
         &__title {
@@ -140,15 +144,13 @@ body {
             font-family: $title-font;
             font-size: 28px;
             font-weight: 400;
-         
             margin: 20px;
         }
 
 
-
-
         &_entriesTitle {
             margin: 0px;
+            padding-top: 20px;
             font-family: $main-font;
             font-size: 16px;
             font-weight: 300;
@@ -156,10 +158,6 @@ body {
             position: relative;
             margin-bottom: 15px;
             
-        }
-
-        &__entries{
-            padding-top: 20px;
         }
 
         &_entriesTitle::after {
@@ -189,6 +187,9 @@ body {
                 white-space: nowrap;
                 
             }
+            h4 {
+                margin: 0px;
+            }
         }
 
         .menu__circleIcon {
@@ -201,11 +202,11 @@ body {
             width: 0px;
             overflow: hidden;
             transition: width 1s ease-in-out;
+            height: 100%;
         }
 
                 .menu__plats:hover .menu__circleIcon {
             width: 60px;     
-            text-overflow: ellipsis;
             height: 100%;
         }
 
@@ -215,7 +216,7 @@ body {
         }
 
 
-
+        
         &__leftColumn {
             display: flex;
             flex-direction: column;
@@ -225,6 +226,8 @@ body {
             padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 10px;
+
+
 
 
             &__name {

@@ -1,7 +1,19 @@
 @charset "UTF-8";
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 .footer {
+  position: absolute;
   background-color: #353535;
   padding-bottom: 22px;
+  bottom: -154px;
+  width: 100%;
+  right: 0px;
+}
+.footer__container {
+  margin-left: 25px;
 }
 .footer * {
   color: white;
@@ -11,7 +23,7 @@
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 16px;
-  padding-top: 18px;
+  padding-top: 20px;
 }
 .footer__paragraph {
   padding-bottom: 7px;
@@ -26,6 +38,28 @@
   padding-right: 10px;
 }
 
+@media (min-width: 767px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    position: absolute;
+    bottom: -35px;
+  }
+  .footer__title {
+    padding-right: 20px;
+    padding-left: 110px;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .footer__paragraph {
+    padding-left: 20px;
+    padding-bottom: 0;
+  }
+  .footer__container {
+    display: flex;
+  }
+}
 @media (min-width: 767px) {
   .fonctionnement {
     display: flex;
@@ -45,24 +79,6 @@
   .restaurants {
     padding-left: 180px;
     padding-right: 180px;
-  }
-  .footer, footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-  }
-  .footer__title, footer__title {
-    padding-right: 20px;
-    padding-left: 110px;
-    padding-top: 20px;
-    padding-bottom: 0;
-  }
-  .footer__paragraph, footer__paragraph {
-    padding-left: 20px;
-    padding-bottom: 0;
-  }
-  .footer__container, footer__container {
-    display: flex;
   }
   .menu {
     margin-left: 180px;
@@ -124,12 +140,12 @@ main {
 
 body {
   margin: 0px;
-  position: relative;
 }
 body .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 body .header__image {
   height: 275px;
@@ -159,12 +175,6 @@ body .header__logoText {
   padding-top: 14px;
   padding-bottom: 14px;
   flex-grow: 1;
-}
-body footer {
-  position: absolute;
-  transform: translateY(-25px);
-  width: 100%;
-  padding-top: 20px;
 }
 body main {
   transform: translateY(-25px);

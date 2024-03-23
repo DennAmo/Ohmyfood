@@ -17,52 +17,50 @@ $white_font: white;
 @keyframes reveal {
     0% {
         display: none;
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  .footer,
-  .menu,
-  .menu__title,
-  .menu__entries,
-  .menu__plats,
-  .menu__buttonCommand {
+}
+
+.footer,
+.menu,
+.menu__title,
+.menu__entries,
+.menu__plats,
+.menu__buttonCommand {
     animation: reveal 2s forwards;
     opacity: 0;
-  }
+}
 
-  .header {
+.header {
     opacity: 0;
     animation: reveal 1s forwards;
-  }
-  
+}
 
-  .menu {
-    animation-delay: 0.5s; 
-  }
-  
-  .menu__title,
-  .menu__entries {
+
+.menu {
+    animation-delay: 0.5s;
+}
+
+.menu__title,
+.menu__entries {
     animation-delay: 1s;
-  }
-  
-  .menu__plats {
-    animation-delay: 1.5s; 
-  }
-  
-  .menu__buttonCommand {
-    animation-delay: 2s; 
-  }
+}
+
+.menu__plats {
+    animation-delay: 1.5s;
+}
+
+.menu__buttonCommand {
+    animation-delay: 2s;
+}
 
 /****************** *********************/
-
-
 
 main {
     overflow-x: hidden;
@@ -70,13 +68,12 @@ main {
 
 body {
     margin: 0px;
-    position: relative;
- 
 
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
 
         &__image {
@@ -112,17 +109,12 @@ body {
 
     }
 
-    footer {
-        position: absolute;
-        transform: translateY(-25px);
-        width: 100%; 
-        padding-top: 20px;
-        }
+
 
     main {
         transform: translateY(-25px);
-                width: 100%;
-               
+        width: 100%;
+
     }
 
 
@@ -132,7 +124,7 @@ body {
         border-radius: 25px 25px 0px 0px;
         padding-bottom: 45px;
         white-space: nowrap;
-        
+
 
         &__buttonCommand {
             display: flex;
@@ -183,9 +175,9 @@ body {
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                font-weight: 900;               
+                font-weight: 900;
             }
-            
+
         }
 
         &__title {
@@ -210,7 +202,7 @@ body {
             padding-left: 17px;
             position: relative;
             margin-bottom: 15px;
-            
+
         }
 
         &_entriesTitle::after {
@@ -225,21 +217,22 @@ body {
 
 
         &__plats {
-            
+
             margin: 10px;
             background-color: white;
             border-radius: 15.043px;
             box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-            cursor: pointer;    
-            
+            cursor: pointer;
+
 
             span {
                 font-family: $main-font;
                 font-size: 18px;
                 font-weight: 700;
                 white-space: nowrap;
-                
+
             }
+
             h4 {
                 margin: 0px;
             }
@@ -258,8 +251,8 @@ body {
             height: 100%;
         }
 
-                .menu__plats:hover .menu__circleIcon {
-            width: 60px;     
+        .menu__plats:hover .menu__circleIcon {
+            width: 60px;
             height: 100%;
         }
 
@@ -269,7 +262,7 @@ body {
         }
 
 
-        
+
         &__leftColumn {
             display: flex;
             flex-direction: column;
@@ -277,8 +270,8 @@ body {
             overflow: hidden;
             text-overflow: ellipsis;
             padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
+            padding-top: 10px;
+            padding-left: 10px;
 
 
 
@@ -294,8 +287,8 @@ body {
                 margin: 0;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-              
-                
+
+
             }
         }
 

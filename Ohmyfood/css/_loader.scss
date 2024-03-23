@@ -1,5 +1,6 @@
 /*animation color*/
-$mainColor: rgba(0, 0, 0, 0.5);;
+$mainColor: rgba(0, 0, 0, 0.5);
+;
 $loaderButton: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
 
 
@@ -10,14 +11,15 @@ $loaderButton: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
 body {
   position: relative;
 }
+
 .loader {
   animation: hideLoader 3s forwards;
   visibility: visible;
   opacity: 1;
   position: fixed;
-top: 0px;
-height: 100vh;
-z-index: 10000;
+  top: 0px;
+  height: 100vh;
+  z-index: 10000;
 }
 
 /* Animation pour faire disparaitre "l'écran de chargement" */
@@ -28,7 +30,7 @@ z-index: 10000;
 
   100% {
     opacity: 0;
-   display: none;
+    display: none;
   }
 }
 

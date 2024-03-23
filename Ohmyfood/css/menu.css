@@ -28,7 +28,7 @@
   .fonctionnement {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 180px;
     padding-right: 180px;
   }
@@ -44,22 +44,22 @@
     padding-left: 180px;
     padding-right: 180px;
   }
-  .footer {
+  .footer, footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
   }
-  .footer__title {
+  .footer__title, footer__title {
     padding-right: 20px;
     padding-left: 110px;
     padding-top: 20px;
     padding-bottom: 0;
   }
-  .footer__paragraph {
+  .footer__paragraph, footer__paragraph {
     padding-left: 20px;
     padding-bottom: 0;
   }
-  .footer__container {
+  .footer__container, footer__container {
     display: flex;
   }
   .menu {

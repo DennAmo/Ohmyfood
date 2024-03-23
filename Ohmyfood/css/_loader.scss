@@ -1,32 +1,23 @@
 /*animation color*/
-$mainColor: #9356DC;
+$mainColor: rgba(0, 0, 0, 0.5);;
 $loaderButton: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
 
 
 /***********  TRANSITION DE CHARGEMENT ***************/
-main,
-header,
-footer {
-  animation: showContent 2.5s forwards;
-}
+
 
 /* Animation pour afficher le contenu de la page après l'animation principale */
-@keyframes showContent {
-  0% {
-    display: none;
-  }
-
-  99%{
-    display: none;
-  }
-
-  100% {
-    display: inherit;
-  }
+body {
+  position: relative;
 }
-
 .loader {
-  animation: hideLoader 2.5s forwards;
+  animation: hideLoader 3s forwards;
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+top: 0px;
+height: 100vh;
+z-index: 10000;
 }
 
 /* Animation pour faire disparaitre "l'écran de chargement" */
@@ -36,7 +27,8 @@ footer {
   }
 
   100% {
-    display: none;
+    opacity: 0;
+   display: none;
   }
 }
 
@@ -49,7 +41,6 @@ footer {
 .loop {
   margin: 0 auto;
   background: $mainColor;
-  position: relative;
   display: flex;
   width: 100%;
   height: 100vh;
@@ -58,7 +49,6 @@ footer {
   color: #fff;
   justify-content: center;
   align-items: center;
-
 }
 
 .loader__button {
@@ -139,7 +129,6 @@ footer {
 .sun {
   color: #FFD700;
   top: 0px;
-  background-color: $mainColor;
   position: absolute;
   top: calc(90vh - 90px);
   right: 20%;

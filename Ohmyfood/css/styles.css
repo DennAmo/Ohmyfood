@@ -27,26 +27,19 @@
 
 /*animation color*/
 /***********  TRANSITION DE CHARGEMENT ***************/
-main,
-header,
-footer {
-  animation: showContent 2.5s forwards;
+/* Animation pour afficher le contenu de la page après l'animation principale */
+body {
+  position: relative;
 }
 
-/* Animation pour afficher le contenu de la page après l'animation principale */
-@keyframes showContent {
-  0% {
-    display: none;
-  }
-  99% {
-    display: none;
-  }
-  100% {
-    display: inherit;
-  }
-}
 .loader {
-  animation: hideLoader 2.5s forwards;
+  animation: hideLoader 3s forwards;
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  z-index: 10000;
 }
 
 /* Animation pour faire disparaitre "l'écran de chargement" */
@@ -55,6 +48,7 @@ footer {
     opacity: 1;
   }
   100% {
+    opacity: 0;
     display: none;
   }
 }
@@ -62,8 +56,7 @@ footer {
 /***********  ANIMATION ***************/
 .loop {
   margin: 0 auto;
-  background: #9356DC;
-  position: relative;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   width: 100%;
   height: 100vh;
@@ -101,7 +94,7 @@ footer {
   bottom: -20px;
   width: 2px;
   height: 2px;
-  box-shadow: 0 0 0 50px #9356DC, 60px 50px 0 70px #9356DC, 90px 90px 0 50px #9356DC, 250px 250px 0 50px #9356DC, 290px 320px 0 50px #9356DC, 320px 400px 0 50px #9356DC;
+  box-shadow: 0 0 0 50px rgba(0, 0, 0, 0.5), 60px 50px 0 70px rgba(0, 0, 0, 0.5), 90px 90px 0 50px rgba(0, 0, 0, 0.5), 250px 250px 0 50px rgba(0, 0, 0, 0.5), 290px 320px 0 50px rgba(0, 0, 0, 0.5), 320px 400px 0 50px rgba(0, 0, 0, 0.5);
   transform: rotate(130deg);
   animation: mtn 20s linear infinite;
 }
@@ -113,7 +106,7 @@ footer {
   width: 400px;
   border-radius: 50%;
   height: 20px;
-  box-shadow: 0 0 0 50px #9356DC, -20px 0 0 20px #9356DC, -90px 0 0 50px #9356DC, 250px 0 0 50px #9356DC, 290px 0 0 50px #9356DC, 620px 0 0 50px #9356DC;
+  box-shadow: 0 0 0 50px rgba(0, 0, 0, 0.5), -20px 0 0 20px rgba(0, 0, 0, 0.5), -90px 0 0 50px rgba(0, 0, 0, 0.5), 250px 0 0 50px rgba(0, 0, 0, 0.5), 290px 0 0 50px rgba(0, 0, 0, 0.5), 620px 0 0 50px rgba(0, 0, 0, 0.5);
   animation: hill 4s 2s linear infinite;
 }
 
@@ -140,7 +133,6 @@ footer {
 .sun {
   color: #FFD700;
   top: 0px;
-  background-color: #9356DC;
   position: absolute;
   top: calc(90vh - 90px);
   right: 20%;
@@ -286,7 +278,7 @@ footer {
   .fonctionnement {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 180px;
     padding-right: 180px;
   }
@@ -302,22 +294,22 @@ footer {
     padding-left: 180px;
     padding-right: 180px;
   }
-  .footer {
+  .footer, footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
   }
-  .footer__title {
+  .footer__title, footer__title {
     padding-right: 20px;
     padding-left: 110px;
     padding-top: 20px;
     padding-bottom: 0;
   }
-  .footer__paragraph {
+  .footer__paragraph, footer__paragraph {
     padding-left: 20px;
     padding-bottom: 0;
   }
-  .footer__container {
+  .footer__container, footer__container {
     display: flex;
   }
   .menu {
@@ -473,7 +465,7 @@ body .restaurants__card-badge--position {
   position: absolute;
   text-align: center;
   right: 0%;
-  z-index: 1;
+  z-index: 9999;
   padding: 9px;
 }
 body .restaurants__iconHeart {

@@ -84,7 +84,6 @@
     transform: translateY(0);
   }
 }
-/* Appliquer l'animation à tous les éléments de la page */
 .footer,
 .menu,
 .menu__title,
@@ -100,24 +99,24 @@
   animation: reveal 1s forwards;
 }
 
-/* Délai pour afficher les éléments les uns après les autres */
 .menu {
-  animation-delay: 0.5s; /* Délai pour afficher après le header et le footer */
+  animation-delay: 0.5s;
 }
 
 .menu__title,
 .menu__entries {
-  animation-delay: 1s; /* Délai pour afficher après le header, le footer et la section menu */
+  animation-delay: 1s;
 }
 
 .menu__plats {
-  animation-delay: 1.5s; /* Délai pour afficher après le header, le footer, la section menu, le titre du menu et les entrées */
+  animation-delay: 1.5s;
 }
 
 .menu__buttonCommand {
-  animation-delay: 2s; /* Délai pour afficher après le header, le footer, la section menu, le titre du menu, les entrées et les plats */
+  animation-delay: 2s;
 }
 
+/****************** *********************/
 main {
   overflow-x: hidden;
 }

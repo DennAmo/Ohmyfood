@@ -1,4 +1,5 @@
 $title-font: Shrikhand;
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -30,6 +31,7 @@ position: absolute;
 
   &__paragraph {
     padding-bottom: 7px;
+    text-decoration: none;
   }
 
   &__paragraph,

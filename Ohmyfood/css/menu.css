@@ -27,6 +27,7 @@ body {
 }
 .footer__paragraph {
   padding-bottom: 7px;
+  text-decoration: none;
 }
 .footer__paragraph, .footer__title {
   margin: 0;
@@ -302,6 +303,9 @@ body .menu__leftColumn {
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 10px;
+}
+body .menu__leftColumn h3 {
+  margin: 0;
 }
 body .menu__leftColumn__name {
   text-overflow: ellipsis;

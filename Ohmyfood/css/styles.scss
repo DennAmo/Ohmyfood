@@ -10,6 +10,7 @@ $dot-store: #9356DC;
 @import "_footer.scss";
 @import "_loader.scss";
 @import "_desktop.scss";
+@import "_iconHeart.scss";
 
 a {
     text-decoration: none;
@@ -23,7 +24,6 @@ a {
 /******* animation de déroulement *************/
 @keyframes reveal {
     0% {
-        display: none;
         opacity: 0;
         transform: translateY(20px);
     }
@@ -33,6 +33,8 @@ a {
         transform: translateY(0);
     }
 }
+
+
 
 main,
 footer {
@@ -191,6 +193,8 @@ body {
         &__step-text {
             padding-left: 35px;
             pointer-events: none;
+            font-size: 16px;
+            font-weight: 500;
         }
 
         &__step-iconCircle {
@@ -254,23 +258,12 @@ body {
             }
         }
 
-        &__iconHeart {
-            position: absolute;
-            font-weight: 100;
-            font-size: 30px;
+        .iconHeart {
             cursor: pointer;
             bottom: 20px;
             right: 40px;
+            position: absolute;
         }
-
-        &__iconHeart:hover {
-            background-image: linear-gradient(to top, #9356DC, #FF79DA);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-weight: 900;
-        }
-
 
 
         &__cards {

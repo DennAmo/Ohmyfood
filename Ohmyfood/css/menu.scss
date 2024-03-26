@@ -6,6 +6,7 @@ $white_font: white;
 
 @import "_footer.scss";
 @import "_desktop.scss";
+@import "_iconHeart.scss";
 
 * {
     font-family: $main-font;
@@ -163,23 +164,6 @@ body {
 
         }
 
-        &__heartIcon {
-            font-weight: 100;
-            font-size: 30px;
-            cursor: pointer;
-            transition: height 2s ease-in-out;
-            transition: width 2s ease-in-out;
-
-            &:hover {
-                background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-weight: 900;
-            }
-
-        }
-
         &__title {
             display: flex;
             align-items: center;
@@ -232,10 +216,6 @@ body {
                 white-space: nowrap;
 
             }
-
-            h4 {
-                margin: 0px;
-            }
         }
 
         .menu__circleIcon {
@@ -268,16 +248,14 @@ body {
             flex-direction: column;
             gap: 5px;
             overflow: hidden;
-            text-overflow: ellipsis;
             padding-bottom: 10px;
             padding-top: 10px;
             padding-left: 10px;
             h3{
                 margin: 0;
-            }
-
-            &__name {
                 text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
 
             &-p {
@@ -287,8 +265,7 @@ body {
                 margin: 0;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-
-
+                overflow: hidden;
             }
         }
 

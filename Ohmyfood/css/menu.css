@@ -14,6 +14,8 @@ body {
 }
 .footer__container {
   margin-left: 25px;
+  display: flex;
+  flex-direction: column;
 }
 .footer * {
   color: white;
@@ -59,6 +61,7 @@ body {
   }
   .footer__container {
     display: flex;
+    flex-direction: row;
   }
 }
 @media (min-width: 767px) {
@@ -86,6 +89,28 @@ body {
     margin-right: 180px;
   }
 }
+@keyframes heartFill {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.iconHeart i {
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.iconHeart:hover i {
+  font-weight: 900;
+  animation: heartFill 2s forwards;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 * {
   font-family: Roboto;
 }
@@ -215,20 +240,6 @@ body .menu__buttonCommand--text {
   color: white;
   font-size: 15px;
 }
-body .menu__heartIcon {
-  font-weight: 100;
-  font-size: 30px;
-  cursor: pointer;
-  transition: height 2s ease-in-out;
-  transition: width 2s ease-in-out;
-}
-body .menu__heartIcon:hover {
-  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: 900;
-}
 body .menu__title {
   display: flex;
   align-items: center;
@@ -271,9 +282,6 @@ body .menu__plats span {
   font-weight: 700;
   white-space: nowrap;
 }
-body .menu__plats h4 {
-  margin: 0px;
-}
 body .menu .menu__circleIcon {
   color: white;
   background-color: #99e2d0;
@@ -299,16 +307,15 @@ body .menu__leftColumn {
   flex-direction: column;
   gap: 5px;
   overflow: hidden;
-  text-overflow: ellipsis;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 10px;
 }
 body .menu__leftColumn h3 {
   margin: 0;
-}
-body .menu__leftColumn__name {
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body .menu__leftColumn-p {
   font-family: Roboto;
@@ -317,6 +324,7 @@ body .menu__leftColumn-p {
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 body .menu__rightColumn {
   display: flex;

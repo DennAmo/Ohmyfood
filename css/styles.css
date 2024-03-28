@@ -120,7 +120,7 @@ body {
   justify-content: center;
 }
 
-.loader__button h2 {
+.loader__button span {
   margin: 0px;
   padding: 0px;
   font-family: Shrikhand;
@@ -314,6 +314,10 @@ body {
 }
 /***********  ANIMATION FIN ***************/
 @media (min-width: 767px) {
+  .header__logo {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
   .fonctionnement {
     display: flex;
     flex-direction: column;
@@ -413,13 +417,13 @@ body {
   margin: 0;
 }
 body .header__logo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-family: Shrikhand;
   font-size: 30px;
   font-weight: 400;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: 0;
+  padding-bottom: 14px;
+  padding-top: 14px;
 }
 body .header__locationBar--position {
   position: relative;

@@ -66,6 +66,46 @@ body {
 }
 /*animation color*/
 /***********  TRANSITION DE CHARGEMENT ***************/
+/******* animation de déroulement *************/
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main,
+footer {
+  animation: reveal 3s forwards;
+  opacity: 0;
+}
+
+.header {
+  opacity: 0;
+  animation: reveal 2s forwards;
+}
+
+.restaurants {
+  animation-delay: 0.5s;
+}
+
+.restaurants__title,
+.restaurants__entries {
+  animation-delay: 1s;
+}
+
+.restaurants__plats {
+  animation-delay: 1.5s;
+}
+
+.restaurants__buttonCommand {
+  animation-delay: 2s;
+}
+
+/************** *****************/
 /* Animation pour afficher le contenu de la page après l'animation principale */
 body {
   position: relative;
@@ -357,7 +397,7 @@ body {
 
 .iconHeart:hover i {
   font-weight: 900;
-  animation: heartFill 2s forwards;
+  animation: heartFill 10s forwards;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
@@ -373,46 +413,6 @@ a {
   font-family: Roboto;
 }
 
-/******* animation de déroulement *************/
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-main,
-footer {
-  animation: reveal 3s forwards;
-  opacity: 0;
-}
-
-.header {
-  opacity: 0;
-  animation: reveal 2s forwards;
-}
-
-.restaurants {
-  animation-delay: 0.5s;
-}
-
-.restaurants__title,
-.restaurants__entries {
-  animation-delay: 1s;
-}
-
-.restaurants__plats {
-  animation-delay: 1.5s;
-}
-
-.restaurants__buttonCommand {
-  animation-delay: 2s;
-}
-
-/************** *****************/
 body {
   margin: 0;
 }

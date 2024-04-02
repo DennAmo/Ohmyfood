@@ -7,6 +7,53 @@ $loaderButton: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
 /***********  TRANSITION DE CHARGEMENT ***************/
 
 
+/******* animation de déroulement *************/
+@keyframes reveal {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+main,
+footer {
+  animation: reveal 3s forwards;
+  opacity: 0;
+}
+
+.header {
+  opacity: 0;
+  animation: reveal 2s forwards;
+}
+
+
+.restaurants {
+  animation-delay: 0.5s;
+}
+
+.restaurants__title,
+.restaurants__entries {
+  animation-delay: 1s;
+}
+
+.restaurants__plats {
+  animation-delay: 1.5s;
+}
+
+.restaurants__buttonCommand {
+  animation-delay: 2s;
+}
+
+/************** *****************/
+
+
 /* Animation pour afficher le contenu de la page après l'animation principale */
 body {
   position: relative;

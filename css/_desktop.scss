@@ -31,12 +31,37 @@
   }
 
   .restaurants {
-    padding-left: 180px;
-    padding-right: 180px;
+    padding-left: 80px;
+    padding-right: 80px;
+    &_column {
+      display: flex;
+      justify-content: center;
+    }
+    &_cards_container{
+      width: 50%;
+    }
+    &_column {
+      display: flex;
+    justify-content: center;
+    }
   }
 
   .menu {
-    margin-left: 180px;
-    margin-right: 180px;
+    &__title {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      margin: 0;
+    }
+    &__entries{
+      padding: 0px 50px 0px 50px;
+    }
   }
+
+.iconHeart {
+  padding-bottom: 10px;
+}
+main {
+  margin: 0px 180px 0px 180px;
+}
 }

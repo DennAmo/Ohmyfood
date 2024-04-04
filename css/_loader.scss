@@ -121,11 +121,43 @@ body {
   font-weight: 400;
 }
 
+.mountain {
+  position: absolute;
+  right: -900px;
+  bottom: -20px;
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    0 0 0 50px $mainColor,
+    60px 50px 0 70px $mainColor,
+    90px 90px 0 50px $mainColor,
+    250px 250px 0 50px $mainColor,
+    290px 320px 0 50px $mainColor,
+    320px 400px 0 50px $mainColor;
+  transform: rotate(130deg);
+  animation: mtn 20s linear infinite;
+}
 
+.hill {
+  position: absolute;
+  right: -900px;
+  bottom: -50px;
+  width: 400px;
+  border-radius: 50%;
+  height: 20px;
+  box-shadow:
+    0 0 0 50px $mainColor,
+    -20px 0 0 20px $mainColor,
+    -90px 0 0 50px $mainColor,
+    250px 0 0 50px $mainColor,
+    290px 0 0 50px $mainColor,
+    620px 0 0 50px $mainColor;
+  animation: hill 4s 2s linear infinite;
+}
 
-
-
-.tree {
+.tree,
+.tree:nth-child(2),
+.tree:nth-child(3) {
   position: absolute;
   height: 100px;
   width: 35px;
@@ -133,7 +165,15 @@ body {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg) no-repeat;
 }
 
-
+.rock {
+  margin-top: -17%;
+  height: 2%;
+  width: 2%;
+  bottom: -2px;
+  border-radius: 20px;
+  position: absolute;
+  background: #ddd;
+}
 
 .sun {
   color: #FFD700;
@@ -184,6 +224,17 @@ body {
   animation: tree 3s 0.000s linear infinite;
 }
 
+.tree:nth-child(2) {
+  animation: tree2 2s 0.150s linear infinite;
+}
+
+.tree:nth-child(3) {
+  animation: tree3 8s 0.050s linear infinite;
+}
+
+.rock {
+  animation: rock 4s -0.530s linear infinite;
+}
 
 .truck {
   animation: truck 4s 0.080s ease infinite;
@@ -223,6 +274,40 @@ body {
   }
 }
 
+@keyframes tree2 {
+  0% {
+    transform: translate(650px);
+  }
+
+  50% {}
+
+  100% {
+    transform: translate(-50px);
+  }
+}
+
+@keyframes tree3 {
+  0% {
+    transform: translate(2750px);
+  }
+
+  50% {}
+
+  100% {
+    transform: translate(-50px);
+  }
+}
+
+@keyframes rock {
+  0% {
+    right: -200px;
+  }
+
+  100% {
+    right: 2000px;
+  }
+}
+
 @keyframes truck {
   0% {}
 
@@ -257,6 +342,18 @@ body {
   }
 
   100% {}
+}
+
+@keyframes mtn {
+  100% {
+    transform: translateX(-2000px) rotate(130deg);
+  }
+}
+
+@keyframes hill {
+  100% {
+    transform: translateX(-2000px);
+  }
 }
 
 

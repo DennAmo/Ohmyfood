@@ -108,7 +108,7 @@ body {
 
 .iconHeart:hover i {
   font-weight: 900;
-  animation: heartFill 10s forwards;
+  animation: heartFill 5s forwards;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;

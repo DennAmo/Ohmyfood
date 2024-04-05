@@ -10,13 +10,13 @@ $loaderButton: #{linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%)};
 /******* animation de déroulement *************/
 @keyframes reveal {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
